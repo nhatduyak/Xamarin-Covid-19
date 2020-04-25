@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms" x:Class="Covid19Feeds.Views.CovidInformViews.CovidInfoPage">
+    <NavigationPage.HasNavigationBar>
+        <x:Boolean>False</x:Boolean>
+    </NavigationPage.HasNavigationBar>
+    <ContentPage.Content>
+        <StackLayout>
+            <yummy:PancakeView Padding="2" HasShadow="True" Sides="4" BackgroundGradientEndColor="#1976D2" BackgroundGradientStartColor="#74B9FF" BackgroundGradientAngle="180" BorderIsDashed="true" CornerRadius="0,0,50,50" HorizontalOptions="FillAndExpand" HeightRequest="200" VerticalOptions="StartAndExpand">
+
+                <Grid>
+                    <forms:AnimationView  Animation="Faq.json" Loop="True" AutoPlay="True" HeightRequest="200" WidthRequest="400" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+                    <Label FontSize="Medium" VerticalOptions="EndAndExpand" Style="{StaticResource PageTileLabel}" TextColor="White" HorizontalOptions="CenterAndExpand" Text="All You Need To Know About Covid-19"></Label>
+                    <Button BackgroundColor="White" CornerRadius="30" Margin="20" Clicked="OnFaqTapped" FontSize="Medium" Style="{StaticResource PageTileLabel}" TextColor="#0A79DF" VerticalOptions="StartAndExpand" HorizontalOptions="EndAndExpand" Text="FAQ's >">
+                      
+                    </Button>
+                </Grid>
+            </yummy:PancakeView>
+            <ScrollView Padding="10,0,10,0">
+                <StackLayout VerticalOptions="FillAndExpand">
+                    <Label HorizontalOptions="StartAndExpand" FontSize="Medium" Style="{StaticResource PageTileLabel}" TextColor="Black">
+                        <Label.FormattedText>
+                            <FormattedString>
+
+                                <Span Text="Symptoms " TextColor="Black"></Span>
+                                <Span Text="(Source WHO)" TextColor="Gray" FontSize="Small" FontAttributes="Italic"></Span>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+
+
+                    <FlexLayout Wrap="Wrap" JustifyContent="SpaceEvenly" HeightRequest="350">
+
+                        <yummy:PancakeView Padding="0" HasShadow="True" Sides="4" BackgroundGradientEndColor="White" BackgroundGradientStartColor="WhiteSmoke" CornerRadius="10" HorizontalOptions="FillAndExpand" HeightRequest="150" WidthRequest="150">
+                            <StackLayout VerticalOptions="FillAndExpand" Padding="5">
+                                <forms:AnimationView  Animation="fever.json" Loop="True" AutoPlay="True"  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+                                <Label Text="Difficulty in Breathing" Style="{StaticResource DescriptionLabel}" HorizontalTextAlignment="Center"></Label>
+                            </StackLayout>
+
+                        </yummy:PancakeView>
+
+
+
+                        <yummy:PancakeView Padding="0" HasShadow="True" Sides="4" BackgroundGradientEndColor="White" BackgroundGradientStartColor="WhiteSmoke" CornerRadius="10" HorizontalOptions="FillAndExpand" HeightRequest="150" WidthRequest="150">
+                            <StackLayout VerticalOptions="FillAndExpand" Padding="5">
+                                <forms:AnimationView  Animation="temperature.json" Loop="True" AutoPlay="True"  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+                                <Label Text="Fever" Style="{StaticResource DescriptionLabel}" HorizontalTextAlignment="Center"></Label>
+                            </StackLayout>
+
+                        </yummy:PancakeView>
+
+
+
+                        <yummy:PancakeView Padding="0" HasShadow="True" Sides="4" BackgroundGradientEndColor="White" BackgroundGradientStartColor="WhiteSmoke" CornerRadius="10" HorizontalOptions="FillAndExpand" HeightRequest="150" WidthRequest="150">
+                            <StackLayout VerticalOptions="FillAndExpand" Padding="5">
+                                <forms:AnimationView  Animation="cough.json" Loop="True" AutoPlay="True" HeightRequest="100" WidthRequest="200"  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+                                <Label Text="Cough" Style="{StaticResource DescriptionLabel}" HorizontalTextAlignment="Center"></Label>
+                            </StackLayout>
+
+                        </yummy:PancakeView>
+
+
+
+                        <yummy:PancakeView Padding="0" HasShadow="True" Sides="4" BackgroundGradientEndColor="White" BackgroundGradientStartColor="WhiteSmoke" CornerRadius="10" HorizontalOptions="FillAndExpand" HeightRequest="150" WidthRequest="150">
+                            <StackLayout VerticalOptions="FillAndExpand" Padding="5">
+                                <forms:AnimationView  Animation="tired.json" Loop="True" AutoPlay="True"  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+                                <Label Text="Tiredness" Style="{StaticResource DescriptionLabel}" HorizontalTextAlignment="Center"></Label>
+                            </StackLayout>
+
+                        </yummy:PancakeView>
+
+
+
+                    </FlexLayout>
+
+
+                     <Label HorizontalOptions="StartAndExpand" FontSize="Medium" Style="{StaticResource PageTileLabel}" TextColor="Black">
+                        <Label.FormattedText>
+                            <FormattedString>
+
+                                <Span Text="Precautions " TextColor="Black"></Span>
+                                <Span Text="(Source WHO)" TextColor="Gray" FontSize="Small" FontAttributes="Italic"></Span>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Grid HorizontalOptions="EndAndExpand">
+                        <!--<Grid.RowDefinitions>
+                            <RowDefinition Height="150"></RowDefinition>
+                             <RowDefinition Height="150"></RowDefinition>
+                             <RowDefinition Height="150"></RowDefinition>
+                             <RowDefinition Height="150"></RowDefinition>
+                             <RowDefinition Height="150"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <forms:AnimationView Animation="washhands.json" Grid.Row="0" Grid.Column="0" VerticalOptions="StartAndExpand" HorizontalOptions="Start" HeightRequest="120" WidthRequest="120"  Loop="True" AutoPlay="True"/>
+                        <Label VerticalTextAlignment="Center" HorizontalTextAlignment="Start" Grid.Row="0" Grid.Column="1" Text="Wash Your Hands" Style="{StaticResource   HeaderLabel}" FontSize="Medium"></Label>
+
+
+                         <forms:AnimationView Animation="socialdistance.json" Grid.Row="1" Grid.Column="1" VerticalOptions="StartAndExpand" HorizontalOptions="EndAndExpand" HeightRequest="120" WidthRequest="120"  Loop="True" AutoPlay="True"/>
+                        <Label Grid.Row="1" VerticalTextAlignment="Center" Grid.Column="0" Text="Social Distancing" Style="{StaticResource   HeaderLabel}" FontSize="Medium" HorizontalTextAlignment="End"></Label>
+
+
+
+                         <forms:AnimationView Animation="eye.json" Grid.Row="2" Grid.Column="0" VerticalOptions="Start" HorizontalOptions="Start" HeightRequest="120" WidthRequest="120"  Loop="True" AutoPlay="True"/>
+                        <Label Grid.Row="2" VerticalTextAlignment="Center" Grid.Column="1" Text="Avoid Touching Eyes/Nose/Face" Style="{StaticResource   HeaderLabel}" FontSize="Medium" HorizontalTextAlignment="Start"></Label>
+
+
+
+                         <forms:AnimationView Animation="wearmask.json" Grid.Row="3" Grid.Column="1" VerticalOptions="StartAndExpand" HorizontalOptions="EndAndExpand" HeightRequest="120" WidthRequest="120"  Loop="True" AutoPlay="True"/>
+                        <Label Grid.Row="3" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Grid.Column="0" Text="Follow good respiratory hygiene" Style="{StaticResource   HeaderLabel}" FontSize="Medium"></Label>
+
+
+
+                         <forms:AnimationView Animation="stayhome.json" Grid.Row="4" Grid.Column="0" VerticalOptions="StartAndExpand" HorizontalOptions="Start" HeightRequest="120" WidthRequest="120"  Loop="True" AutoPlay="True"/>
+                        <Label VerticalTextAlignment="Center" Grid.Row="4" Grid.Column="1" Text="Stay home if you feel unwel" Style="{StaticResource   HeaderLabel}" FontSize="Medium" HorizontalTextAlignment="Start"></Label>-->
+
+                        <StackLayout>
+                             <StackLayout Orientation="Horizontal">
+                        <yummy:PancakeView BackgroundGradientStartColor="#0A79DF" BackgroundGradientEndColor="White" CornerRadius="50" Sides="4" HeightRequest="20" WidthRequest="20" VerticalOptions="CenterAndExpand"></yummy:PancakeView>
+                        <Label Text="Wash Your Hands" Style="{StaticResource   HeaderLabel}" FontSize="Medium"></Label>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <yummy:PancakeView BackgroundGradientStartColor="#0A79DF" BackgroundGradientEndColor="White" CornerRadius="50" Sides="4" HeightRequest="20" WidthRequest="20" VerticalOptions="CenterAndExpand"></yummy:PancakeView>
+                        <Label Text="Social Distancing" Style="{StaticResource   HeaderLabel}" FontSize="Medium"></Label>
+                    </StackLayout>
+
+
+                    <StackLayout Orientation="Horizontal">
+                        <yummy:PancakeView BackgroundGradientStartColor="#0A79DF" BackgroundGradientEndColor="White" CornerRadius="50" Sides="4" HeightRequest="20" WidthRequest="20" VerticalOptions="CenterAndExpand"></yummy:PancakeView>
+                        <Label Text="Avoid Touching Eyes/Nose/Face" Style="{StaticResource   HeaderLabel}" FontSize="Medium"></Label>
+                    </StackLayout>
+
+
+
+                    <StackLayout Orientation="Horizontal">
+                        <yummy:PancakeView BackgroundGradientStartColor="#0A79DF" BackgroundGradientEndColor="White" CornerRadius="50" Sides="4" HeightRequest="20" WidthRequest="20" VerticalOptions="CenterAndExpand"></yummy:PancakeView>
+                        <Label Text="follow good respiratory hygiene" Style="{StaticResource   HeaderLabel}" FontSize="Medium"></Label>
+                    </StackLayout>
+
+                      <StackLayout Orientation="Horizontal">
+                        <yummy:PancakeView BackgroundGradientStartColor="#0A79DF" BackgroundGradientEndColor="White" CornerRadius="50" Sides="4" HeightRequest="20" WidthRequest="20" VerticalOptions="CenterAndExpand"></yummy:PancakeView>
+                        <Label Text="Stay home if you feel unwell" Style="{StaticResource   HeaderLabel}" FontSize="Medium"></Label>
+                    </StackLayout>
+
+                      <StackLayout Orientation="Horizontal">
+                        <yummy:PancakeView BackgroundGradientStartColor="#0A79DF" BackgroundGradientEndColor="White" CornerRadius="50" Sides="4" HeightRequest="20" WidthRequest="20" VerticalOptions="CenterAndExpand"></yummy:PancakeView>
+                        <Label Style="{StaticResource   HeaderLabel}" FontSize="Medium" Text="Keep up to date on the latest COVID-19 hotspots"></Label>
+                    </StackLayout>
+                        </StackLayout>
+                    </Grid>
+                     
+
+                   
+
+                </StackLayout>
+
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
